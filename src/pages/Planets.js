@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { ActionItems } from "actions";
-
 import { Items } from "components";
 
-const Home = () => {
+const Planets = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     (() => {
-      dispatch(ActionItems());
+      dispatch(ActionItems("http://swapi.dev/api/planets/"));
     })();
   }, [dispatch]);
 
@@ -20,4 +19,5 @@ const Home = () => {
   );
 };
 
-export default Home;
+Planets.defaultProps = {};
+export default Planets;

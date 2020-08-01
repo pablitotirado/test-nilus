@@ -1,12 +1,6 @@
 import { combineReducers } from "redux";
+import reducerItems from "./reducer-people";
 
-const re = (state = {}, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
-
-const reducer = combineReducers({ re });
+const reducer = combineReducers({ items: reducerItems });
 
 export default reducer;

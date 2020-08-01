@@ -1,14 +1,18 @@
 import React, { Suspense } from "react";
 import { Route, Redirect } from "react-router-dom";
-import { BounceLoader } from "react-spinners";
+import { AppContainer } from "./globalStyles";
+import { Loading, Navbar } from "components";
 import routes from "./routes";
 
 const App = () => (
-  <Suspense fallback={<BounceLoader color="red" />}>
-    {routes.map((route, i) => (
-      <Route key={`${i}_${route.path}`} {...route} />
-    ))}
-    <Redirect to="/" />
+  <Suspense fallback={<Loading loading={true} />}>
+    <AppContainer>
+      <Navbar />
+      {routes.map((route, i) => (
+        <Route key={`${i}_${route.path}`} {...route} />
+      ))}
+    </AppContainer>
+    <Redirect to="/peoples" />
   </Suspense>
 );
 
