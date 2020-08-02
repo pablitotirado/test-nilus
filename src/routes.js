@@ -1,22 +1,19 @@
-import { lazy } from "react";
-
-const Home = lazy(() => import("pages/Home"));
-const Details = lazy(() => import("pages/Details"));
-const League = lazy(() => import("pages/League"));
-const Planets = lazy(() => import("pages/Planets"));
-const Species = lazy(() => import("pages/Species"));
-const Starships = lazy(() => import("pages/Starships"));
+import Home from "pages/Home";
+import Details from "pages/Details";
+import League from "pages/League";
+import Planets from "pages/Planets";
+import Species from "pages/Species";
+import Starships from "pages/Starships";
 
 export default [
   {
     component: Home,
-    path: "/peoples",
+    path: "/people",
     exact: true,
   },
   {
     component: Details,
-    path: "/details:item",
-    exact: true,
+    path: "/details",
   },
   {
     component: League,

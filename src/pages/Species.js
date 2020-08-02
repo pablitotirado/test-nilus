@@ -11,12 +11,8 @@ const Species = () => {
       dispatch(ActionItems("http://swapi.dev/api/species/"));
     })();
   }, [dispatch]);
-  return (
-    <>
-      <Items />
-    </>
-  );
+
+  return <Items />;
 };
 
-Species.defaultProps = {};
 export default Species;

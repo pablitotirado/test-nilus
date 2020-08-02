@@ -11,12 +11,8 @@ const Starships = () => {
       dispatch(ActionItems("http://swapi.dev/api/starships/"));
     })();
   }, [dispatch]);
-  return (
-    <>
-      <Items />
-    </>
-  );
+
+  return <Items />;
 };
 
-Starships.defaultProps = {};
 export default Starships;

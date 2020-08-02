@@ -11,6 +11,7 @@ export const ContainerNav = styled.div`
     color: #e48942;
     border-right: 2px solid #e48942;
     border-left: 2px solid #e48942;
+    font-size: 1.2rem;
   }
   padding: 0.5rem 0;
 `;

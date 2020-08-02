@@ -2,7 +2,8 @@ import {
   GET_ITEMS_INIT,
   GET_ITEMS_SUCCESS,
   GET_ITEMS_ERROR,
-} from "types/people";
+} from "types/items";
+
 import Http from "api/client-http";
 
 const items = new Http();
@@ -28,7 +29,7 @@ export const ActionItems = url => async dispatch => {
           prevPage: previous,
         },
       });
-    }, 500);
+    }, 200);
   } catch ({ message }) {
     dispatch({
       type: GET_ITEMS_ERROR,

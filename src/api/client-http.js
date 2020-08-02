@@ -3,13 +3,15 @@ export default class Http {
 
   async get(url) {
     const request = await fetch(url);
-    const response = await request.json();
-    return response;
+    return await request.json();
   }
 
   async getItems(url) {
     const urlTemp = url ? url : `${this.baseURL}people`;
-    const response = await this.get(urlTemp);
-    return response;
+    return await this.get(urlTemp);
+  }
+
+  async getItemActive(url) {
+    return await this.get(url);
   }
 }

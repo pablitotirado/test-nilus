@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { ActionGetItemsLeague } from "actions";
+import { League as LeagueComponent, Loading } from "components";
+import { ContainerCenter } from "globalStyles";
 
 const League = () => {
+  const { items, loading } = useSelector(({ league }) => league);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    (() => {
+      dispatch(ActionGetItemsLeague());
+    })();
+  }, [dispatch]);
+
+  if (loading) {
+    return <Loading loading={true} />;
+  }
   return (
-    <>
-      <h1>Crea tu propia liga!</h1>
-    </>
+    <ContainerCenter>
+      <LeagueComponent {...items} />;
+    </ContainerCenter>
   );
 };
 
-League.defaultProps = {};
 export default League;

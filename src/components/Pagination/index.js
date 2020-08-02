@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { PaginationContainer } from "./styles";
 
-const Pagination = ({ next, prev, action }) => {
+export const Pagination = ({ next, prev, action }) => {
   const dispatch = useDispatch();
   return (
     <>
@@ -21,6 +21,4 @@ const Pagination = ({ next, prev, action }) => {
     </>
   );
 };
-
-Pagination.defaultProps = {};
 export default Pagination;

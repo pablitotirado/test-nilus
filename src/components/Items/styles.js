@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const ItemsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -14,5 +15,6 @@ export const ItemCard = styled.div`
     border: 2px solid #e48942;
     padding: 1rem;
     border-radius: 5px;
+    cursor: pointer;
   }
 `;

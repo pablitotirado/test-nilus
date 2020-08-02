@@ -12,12 +12,7 @@ const Planets = () => {
     })();
   }, [dispatch]);
 
-  return (
-    <>
-      <Items />
-    </>
-  );
+  return <Items />;
 };
 
-Planets.defaultProps = {};
 export default Planets;
